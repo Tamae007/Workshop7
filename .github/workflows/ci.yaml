@@ -6,8 +6,7 @@ on:
         - main
 
 jobs:
-  deploy:
-    build:
+  build:
     name: Build and analyze
     runs-on: ubuntu-latest
     
@@ -25,8 +24,9 @@ jobs:
       #   timeout-minutes: 5
       #   env:
       #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      
-    runs-on: ubuntu-latest
+
+  deploy:
+
     env:
       SERVER_IP: ${{ vars.SERVER_IP }}
 
